@@ -1,0 +1,271 @@
+// main: style.scss
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	ul {
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		float: right;
+		@include rem('margin-right', 30px);
+		ul {
+			float: left;
+			position: absolute;
+			top: 100%;
+			left: -999em;
+			z-index: 99999;
+			background: #FFF;
+			box-shadow: 0 4px 7px rgba(0, 0, 0, 0.05);
+			border-top: 2px solid $color__primary;
+			ul {
+				left: -999em;
+				top: -2px;
+			}
+			li {
+				line-height: 45px;
+				&:hover > ul,
+				&.focus > ul {
+					left: 100%;
+				}
+				li {
+
+				}
+			}
+
+			a {
+				width: 200px;
+				font-size: 15px;
+				line-height: 1.7;
+				padding: 6px 15px;
+			}
+
+			:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}
+		}
+
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		float: left;
+		position: relative;
+		&:hover > a,
+		&.focus > a {
+		}
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+		padding: 0px 13px;
+		color: $color__text;
+		letter-spacing: 0.3px;
+		&:hover {
+			color: $color__primary;
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+		color: $color__primary;
+	}
+}
+
+/* Small menu. */
+.menu-toggle-wrapper {
+	position: absolute;
+	right: 50px;
+}
+.menu-toggle {
+	padding: 1px 12px 2px;
+	border-radius: 2px;
+	box-shadow: none;
+	border: none;
+	display: none;
+	&:before {
+		content: '\f0c9';
+		-moz-osx-font-smoothing: grayscale;
+	    font-family: "FontAwesome";
+	    font-style: normal;
+	    font-variant: normal;
+	    font-weight: normal;
+	    text-decoration: inherit;
+	    text-transform: none;
+		position: relative;
+		margin-right: 5px;
+		bottom: 0px;
+	}
+}
+.main-navigation.toggled {
+	.menu-toggle {
+		background: $color__primary;
+	}
+	.menu-toggle:before {
+		content: '\f00d';
+		bottom: 1px;
+	}
+}
+
+.main-navigation.toggled ul {
+	@include media-breakpoint-down(md) {
+		display: block;
+		float: none;
+		//padding-bottom: 15px;
+		li {
+			width: 100%;
+			line-height: 40px;
+			border-top: 1px solid #eeeeee;
+		}
+		li:hover > ul,
+		li.focus > ul {
+			left: 0;
+		}
+		a {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		ul {
+			margin-right: 0px;
+			position: inherit;
+			left: 0;
+			border-top: none;
+			a {
+				width: auto;
+				padding-left: 25px;
+				position: relative;
+				&:after {
+                    content: "";
+                    width: 6px;
+                    height: 6px;
+                    border-left: 1px solid #dddddd;
+                    border-bottom: 1px solid #dddddd;
+                    display: block;
+                    position: absolute;
+                    left: 0px;
+                    top: 14px;
+                }
+			}
+			ul {
+				left: 0;
+				position: inherit;
+				a {
+					padding-left: 50px;
+					position: relative;
+					&:after {
+						left: 25px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include media-breakpoint-down(md) {
+	.menu-toggle {
+		display: inline-block;
+	}
+	.main-navigation ul {
+		display: none;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		@include rem('margin', 0 0 30px);
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
+
+.post-navigation {
+	background: #FFF;
+	border: 1px solid $color__border;
+	border-top: none;
+	.site-main & {
+		margin-bottom: 0px;
+	}
+	.nav-previous, .nav-next {
+		@include rem('padding', 18px 25px 19px);
+	}
+}
+
+.posts-navigation {
+	a {
+		letter-spacing: 1.3px;
+		font-size: 13px;
+		text-transform: uppercase;
+		@include border-radius(2px);
+		background: $color__primary;
+		color: #fff;
+		@include rem('padding', 8px 24px 9px);
+		display: inline-block;
+		&:hover {
+			background: #666666;
+			text-decoration: none;
+		}
+	}
+	.nav-previous a:before, .nav-next a:after {
+		font-size: 15px;
+		bottom: 0px;
+	    content: '\f100';
+	    margin-right: 5px;
+	    position: relative;
+	    text-decoration: inherit;
+	    text-transform: none;
+	}
+	.nav-next a:after {
+		content: '\f101';
+		margin-right: 0;
+		margin-left: 5px;
+		right: 0;
+	}
+}
+
+.content-area {
+	#infinite-handle {
+		text-align: center;
+	}
+    #infinite-handle span {
+        color: #FFFFFF;
+        background: $color__primary;
+        @include rem('padding', 12px 26px 11px);
+        @include border-radius(2px);
+        button {
+            font-size: 15px;
+    		text-transform: uppercase;
+			letter-spacing: 1px;
+            &:hover {
+                font-size: 15px;
+            }
+        }
+        &:hover {
+            background: #666666;
+        }
+    }
+}

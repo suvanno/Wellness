@@ -1,0 +1,162 @@
+// main: style.scss
+
+/* Sidebar + Widgets */
+.sidebar-widget-area {
+    color: $color__meta;
+    @include media-breakpoint-down(md) {
+        @include rem('margin-top', 50px);
+        margin-left: 15%;
+        margin-right: 15%;
+        width: auto;
+    }
+    @include media-breakpoint-down(sm) {
+        @include rem('margin-top', 50px);
+        margin-left: 10%;
+        margin-right: 10%;
+        width: auto;
+    }
+    @include media-breakpoint-down(xs) {
+        @include rem('margin-top', 50px);
+        margin-left: 0%;
+        margin-right: 0%;
+        width: auto;
+    }
+    .widget_recent_entries {
+        .widget-title {
+            @include rem('margin-bottom', 8px);
+        }
+    }
+}
+
+.widget {
+    //font-weight: 300;
+    @include rem('font-size', 15px);
+    @include rem('margin-bottom', 30px);
+    &:last-child {
+        margin-bottom: 0px;
+    }
+
+    .widget-title {
+        color: $color__text;
+        @include rem('margin-bottom', 18px);
+        font-weight: 400;
+        .footer-widget-area & {
+            color: #FFFFFF;
+        }
+    }
+
+    ul, ol {
+        list-style: outside none none;
+        margin: 0;
+        padding: 0px;
+    }
+    ul > li, ol > li {
+        border-top: 1px solid $color__border;
+        @include rem('padding', 9px 0px 10px);
+    }
+    li > ul, li > ol {
+        @include rem('margin-left', 24px);
+    }
+    ul ul {
+        @include rem('margin-top', 11px);
+    }
+    ul ul > li:last-child {
+        padding-bottom: 0;
+    }
+    select {
+        max-width: 100%;
+    }
+    .search-submit {
+        display: none;
+    }
+    .search-field {
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .footer-widget-area & {
+        @include rem('margin-bottom', 30px);
+        ul > li, ol > li {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+    }
+    &.widget_wpcom_social_media_icons_widget {
+        ul > li, ol > li {
+            border-top: none;
+            padding: 0;
+            margin: 0;
+            margin-right: 10px;
+        }
+        a {
+            font-size: 24px;
+        }
+    }
+}
+
+/* Calendar Widget */
+.widget_calendar {
+    caption {
+        margin-bottom: 10px;
+    }
+}
+
+/* Recent Entries Widget */
+.widget_recent_entries {
+    ul > li, ol > li {
+        border-top: none;
+    }
+    .post-date {
+        display: block;
+        font-style: italic;
+        font-size: 13px;
+    }
+}
+
+/* Widget Categories, Archive */
+.widget_categories > ul,
+.widget_meta > ul,
+.widget_archive > ul {
+    margin-left: -20px;
+    > li {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 50%;
+        float: left;
+        border-top: none;
+        @include rem('padding', 5px 0px 10px);
+        padding-left: 20px;
+    }
+    .footer-widget-area & {
+        > li {
+            border-top: none;
+        }
+    }
+}
+
+/* Tag Cloud */
+.widget_tag_cloud a {
+    border: 1px solid $color__border;
+    border-radius: 2px;
+    display: inline-block;
+    font-size: 13px !important;
+    margin-bottom: 5px;
+    padding: 3px 10px;
+    color: $color__meta;
+    &:hover {
+        border-color: $color__primary;
+        color: $color__primary;
+    }
+}
+
+.footer-widget-area .widget_tag_cloud a {
+    border-color: rgba(255, 255, 255, 0.05);
+    color: inherit;
+    &:hover {
+        border-color: $color__primary;
+        color: $color__primary;
+    }
+}

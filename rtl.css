@@ -1,0 +1,223 @@
+/*
+Theme Name: Wellness
+
+Adding support for language written in a Right To Left (RTL) direction is easy -
+it's just a matter of overwriting all the horizontal positioning attributes
+of your CSS stylesheet in a separate stylesheet file named rtl.css.
+
+https://codex.wordpress.org/Right_to_Left_Language_Support
+
+*/
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+/*------------------------------
+# Accessibility
+------------------------------*/
+.screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
+	left: auto;
+	right: 5px;
+}
+
+/*------------------------------
+# Site Header
+------------------------------*/
+.site-header .site-branding {
+	float: right;
+	margin-right: auto;
+	margin-left: 1.875rem;
+}
+.site-header .header-search {
+	left: 0px;
+	right: auto;
+}
+
+.site-header .header-search .search-form {
+	right: auto;
+	left: 0;
+}
+
+.site-header .header-search {
+	right: auto;
+	left: 40px;
+}
+
+/*------------------------------
+# Navigation
+------------------------------*/
+.main-navigation ul {
+	float: left;
+	margin-right: 0px;
+	margin-left: 30px;
+	padding: 0px;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: auto;
+	right: 100%;
+}
+
+.main-navigation li {
+	float: right;
+}
+
+.menu-toggle-wrapper {
+	right: auto;
+	left: 50px;
+}
+
+@media (max-width: 991px) {
+	.site-header .header-search {
+		left: 20px;
+	}
+}
+
+.menu-toggle:before {
+	content: none;
+}
+
+.main-navigation.toggled .menu-toggle:before {
+	content: none;
+}
+
+.menu-toggle:after {
+	content: '\f0c9';
+	-moz-osx-font-smoothing: grayscale;
+	font-family: "FontAwesome";
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	text-transform: none;
+	position: relative;
+	margin-left: 5px;
+	bottom: 0px;
+}
+
+.main-navigation.toggled .menu-toggle:after {
+	content: '\f00d';
+	bottom: 1px;
+}
+
+@media (max-width: 991px) {
+	.main-navigation ul {
+		margin-left: 0px;
+	}
+
+	.main-navigation.toggled ul li:hover > ul,
+	.main-navigation.toggled ul li.focus > ul {
+		left: auto;
+		right: 0;
+	}
+
+	.main-navigation.toggled ul ul a {
+		padding-left: auto;
+		padding-right: 25px;
+	}
+
+	.main-navigation.toggled ul ul ul a {
+		padding-left: auto;
+		padding-right: 50px;
+	}
+
+	.main-navigation.toggled ul ul a::after {
+		left: auto;
+		right: 0px;
+		border-right: 1px solid #dddddd;
+    	border-top: none;
+		border-bottom: 1px solid #dddddd;
+		border-left: none;
+	}
+	.main-navigation.toggled ul ul ul a:after {
+		right: 25px;
+	}
+}
+
+/*------------------------------
+# Featured Content Slider
+------------------------------*/
+.site-featured-content .featured-post-slide-meta {
+	left: auto;
+	right: 0px;
+	animation-name: fadeInRight;
+}
+.site-featured-content .slider-nav {
+	right: auto;
+	left: 15px;
+}
+.site-featured-content .slider-nav-next {
+	left: 70px
+}
+
+/*------------------------------
+# Posts
+------------------------------*/
+.entry-meta > span {
+	float: right;
+	margin-right: 0;
+	margin-left: 1.25rem;
+}
+
+.entry-footer > span{
+	float: right;
+	margin-right: 0;
+	margin-left: 1.25rem;
+}
+
+.comments-area .comments-title .comment_number_count {
+	float: right;
+	margin-right: 0;
+	margin-left: 0.875rem;
+}
+
+.comments-area .comments-title .add_yours a {
+	top: 0;
+}
+
+.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous {
+	float: right;
+}
+
+.comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next {
+	float: left;
+}
+
+/* Comment List */
+.comments-area .comment-list .avatar {
+	float: right;
+	margin-right: 0;
+	margin-left: 1.0625rem;
+}
+
+/*------------------------------
+# Testimonial Grid
+------------------------------*/
+.testimonials-grid .entry-content::after {
+	left: auto;
+	right: 42px;
+}
+
+.testimonials-grid .entry-header {
+	margin: 1.875rem 1.125rem 0rem 0;
+}
+
+.testimonials-grid .entry-header .entry-thumb {
+	left: auto;
+	right: 0;
+}
+
+.testimonials-grid .entry-header .entry-title {
+	padding-left: auto;
+	padding-right: 80px;
+}
+
+/*------------------------------
+# Widgets
+------------------------------*/
+.widget.widget_wpcom_social_media_icons_widget ul > li, .widget.widget_wpcom_social_media_icons_widget ol > li {
+	margin-right: 0px;
+	margin-left: 10px;
+}

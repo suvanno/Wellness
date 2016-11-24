@@ -1,0 +1,97 @@
+/*
+Theme Name: Wellness
+Theme URI: https://daisythemes.com/theme/wellness
+Author: DaisyThemes
+Author URI: https://daisythemes.com
+Description: Wellness is a responsive multipurpose WordPress theme for Health, Fitness and Wellness. It is built upon WP customizer so you can update and view changes in real time. Built in Color Scheme, Header manager, Featured Post sliders so that you can setup your website quick and easily.  It also comes with 6 build-in widgets i.e. About, Classes & Training listings, Recent Posts, Services Listings, Social Icons and Client Testimonial. Wellness theme best suits to your Spa, Salon, beauty center, parlor, massage center, health care, make up, massage, nail, physiotherapy, salon, skincare, wellness, yoga, fitness, gym, Pilates, muscular, health club, trainers, weight loss and other alike businesses. It can be used for multipurpose use and is also suitable for photographers, business, corporate, blogger and other personal websites. You can read more details at: https://daisythemes.com/theme/wellness/ and Check demo at: https://daisythemes.com/wellness/
+Version: 1.1.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wellness
+Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-logo, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, blog, food-and-drink
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Wellness is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Document
+	## Typography
+	## Links
+	## Headings
+	## Base
+	## Content
+	## Table
+	## Form
+	## Accessibility
+	## Alignments
+	## Clearings
+	## Infinite Scroll
+	## Helper
+# Structure
+# Navigation
+# Content
+# Pages
+# Media
+	## Captions
+	## Galleries
+# Widgets
+# Plugins
+
+--------------------------------------------------------------*/
+@import "variables";
+@import "mixins";
+
+/*--------------------------------------------------------------
+#. Normalize
+--------------------------------------------------------------*/
+@import "reset";
+
+/*--------------------------------------------------------------
+# Document
+--------------------------------------------------------------*/
+@import "document";
+
+/*--------------------------------------------------------------
+# Structure
+--------------------------------------------------------------*/
+@import "structure";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "content";
+
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import "pages";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+@import "media";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "widgets";
+
+/*--------------------------------------------------------------
+# Plugins
+--------------------------------------------------------------*/
+@import "plugins";
